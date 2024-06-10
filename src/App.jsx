@@ -21,6 +21,7 @@ const styles = {
   },
   title: {
     fontSize: '36px',
+    color: '#FF7F3E'
   },
 }
 

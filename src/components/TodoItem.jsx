@@ -8,8 +8,12 @@ const TodoItem = ({ todo }) => {
 
 const styles = {
   todoItem: {
-    border: '2px solid #f4f4f4',
+    border: '2px solid #FFDA78',
+    backgroundColor: "#FFDA78",
     fontSize: '24px',
+    margin: '10px',
+    padding: '0 5px',
+    borderRadius: '20px'
   },
 }
 
