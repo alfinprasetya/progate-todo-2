@@ -20,6 +20,7 @@ const Todos = ({ todos, toggleCompleted, deleteTodo }) => {
 const styles = {
   container: {
     width: "80%",
+    maxWidth: '900px',
     margin: "0 auto",
   },
 };
