@@ -1,17 +1,10 @@
 import TodoItem from "./TodoItem"; // Lakukan import
 
-const Todos = ({ todos, toggleCompleted, deleteTodo }) => {
+const Todos = ({ todos }) => {
   return (
     <div style={styles.container}>
       {todos.map((todo) => {
-        return (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            toggleCompleted={toggleCompleted}
-            deleteTodo={deleteTodo}
-          />
-        );
+        return <TodoItem key={todo.id} todo={todo} />;
       })}
     </div>
   );
@@ -20,7 +13,7 @@ const Todos = ({ todos, toggleCompleted, deleteTodo }) => {
 const styles = {
   container: {
     width: "80%",
-    maxWidth: '900px',
+    maxWidth: "900px",
     margin: "0 auto",
   },
 };

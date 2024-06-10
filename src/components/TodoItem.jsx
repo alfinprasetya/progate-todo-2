@@ -1,4 +1,9 @@
-const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
+import { useContext } from "react";
+import { TodoContext } from "../App";
+
+const TodoItem = ({ todo }) => {
+  const { toggleCompleted, deleteTodo } = useContext(TodoContext);
+
   const getTodoTitleStyle = () => {
     if (todo.completed === true) {
       return { textDecoration: "line-through" };
@@ -15,7 +20,9 @@ const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
         onChange={() => toggleCompleted(todo.id)}
       ></input>
       <p style={getTodoTitleStyle()}>{todo.title}</p>
-      <button onClick={() => deleteTodo(todo.id)} style={styles.button}>x</button>
+      <button onClick={() => deleteTodo(todo.id)} style={styles.button}>
+        x
+      </button>
     </div>
   );
 };
@@ -29,7 +36,7 @@ const styles = {
     padding: "0 20px",
     borderRadius: "20px",
     display: "flex",
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     alignItems: "center",
   },
   checkbox: {
@@ -38,14 +45,14 @@ const styles = {
     width: "25px",
   },
   button: {
-    backgroundColor: '#BB0000',
-    color: '#fff',
-    height: '30px',
-    width: '30px',
-    borderRadius: '100%',
-    border: 'none',
-    cursor: 'pointer',
-    fontSize: '16px',
+    backgroundColor: "#BB0000",
+    color: "#fff",
+    height: "30px",
+    width: "30px",
+    borderRadius: "100%",
+    border: "none",
+    cursor: "pointer",
+    fontSize: "16px",
   },
 };
 
